@@ -1,0 +1,56 @@
+﻿@model AgendamentosPD.Models.Agendamento
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<div class="main-w">
+    <div class="row p-2">
+        <div class="col-md-12 bg-white">
+            <h2 class="text-success py-2">Detalhes</h2>
+
+            <div>
+                <h4>Agendamento</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Sala.id)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Sala.id)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.titulo)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.titulo)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.inicio)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.inicio)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.fim)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.fim)
+                    </dd>
+
+                </dl>
+            </div>
+            <p>
+                @Html.ActionLink("Editar", "Edit", new { id = Model.id }) |
+                @Html.ActionLink("Voltar para Lista", "Index")
+            </p>
+        </div>
+    </div>
+</div>

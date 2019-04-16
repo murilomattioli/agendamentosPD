@@ -1,0 +1,64 @@
+﻿@model AgendamentosPD.Models.Agendamento
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="main-w">
+    <div class="row p-2">
+        <div class="col-md-12 bg-white">
+            <h2 class="text-success py-2">Excluir <i class="fas fa-trash"></i></h2>
+
+            <h3 class="text-danger">Tem certeza que quer excluir?</h3>
+            <div>
+                <h4>Agendamento</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Sala.id)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Sala.id)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.titulo)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.titulo)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.inicio)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.inicio)
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.fim)
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.fim)
+                    </dd>
+
+                </dl>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-actions no-color pb-3">
+                        <input type="submit" value="EXCLUIR" class="btn btn-danger" />
+                        <br><br><br>
+                        @Html.ActionLink("Voltar para lista", "Index")
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

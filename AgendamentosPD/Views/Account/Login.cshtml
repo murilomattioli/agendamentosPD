@@ -1,0 +1,65 @@
+﻿@using AgendamentosPD.Models
+@model LoginViewModel
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="main-w">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-10 ">
+            <form class="" action="@Url.Action("Login", "Account")" method="post">
+                @Html.AntiForgeryToken()
+                <div class="col-lg-12 mb-5 text-center">
+                    <a href="index.html">
+                        <img class="w-25" src="img/smarapd.png" alt="">
+                    </a>
+                </div>
+                <div class="row justify-content-center py-5">
+                    <div class="col-lg-7 col-sm-10">
+                        <div class="row login-area p-3">
+                            <div class="col-lg-12">
+                                <span class="text-white font-roboto fs-24">LOGIN</span>
+                                <p class="text-white font-roboto-thin">Por favor insira seus dados de login abaixo</p>
+                            </div>
+                            <div class="col-lg-12 py-1">
+                                <input class="w-100 input-login" type="email" name="email" placeholder="E-mail">
+                            </div>
+                            <div class="col-lg-12 py-1">
+                                <input class="w-100 input-login" type="password" name="password" placeholder="Senha">
+                            </div>
+                            <div class="col-lg-12 py-3">
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        @Html.CheckBoxFor(m => m.RememberMe, new { @class = "text-white" })
+                                        @Html.LabelFor(m => m.RememberMe, new { @class = "text-white" })
+
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <input class="w-100 btn btn-outline-light py-2" type="submit" name="" value="Entrar">
+                                    </div>
+                                    <div class="col-lg-12 py-3">
+                                        <span class="text-white">
+                                            <a class="text-white align-middle font-effect-fire-animation fs-16 font-roboto-thin" href="@Url.Action("ForgotPassword", "Account")">Esqueci minha senha?</a>
+                                            ou
+                                            <a class="text-white align-middle font-effect-fire-animation fs-16 font-roboto-thin" href="@Url.Action("Register", "Account")">Criar conta</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--   <div class="col-md-4">
+            <section id="socialLoginForm">
+                /*Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })*/
+            </section>
+        </div>
+-->
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

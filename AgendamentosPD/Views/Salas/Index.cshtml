@@ -1,0 +1,47 @@
+﻿@model IEnumerable<AgendamentosPD.Models.Sala>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="main-w">
+    <div class="row p-2">
+        <div class="col-md-12 bg-white">
+            <h2 class="text-success py-2">Index</h2>
+
+            <p>
+                @Html.ActionLink("Criar Novo", "Create")
+            </p>
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.numero)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.bloco)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.numero)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.bloco)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Editar", "Edit", new { id = item.id }) |
+                            @Html.ActionLink("Detalhes", "Details", new { id = item.id }) |
+                            @Html.ActionLink("Excluir", "Delete", new { id = item.id })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</div>
+           

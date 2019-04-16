@@ -1,0 +1,48 @@
+﻿@model IEnumerable<AgendamentosPD.Models.Agendamento>
+@{
+    ViewBag.Title = "Dashboard";
+}
+<div class="main-w">
+    <div class="row p-2">
+        <div class="col-md-12 bg-white">
+            <div class="border-bottom border-muted py-1">
+                <span class="text-success h2">Dashboard - SmaraPD</span>
+            </div>
+            <div class="py-1">
+                <div class="py-4">
+                    <div class="py-2">
+                        <span class="text-muted h4 mr-3">Reuniões <i class="fas fa-users"></i></span>
+                        <a class="btn btn-outline-success mr-3 py-1 align-top" href="@Url.Action("Create", "Agendamentos")">Agendar <i class="far fa-calendar-plus"></i></a>
+                    </div>
+                    <table class="table bordered border rounded scrollable">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Título</th>
+                                <th scope="col">idSala</th>
+                                <th scope="col">Data</th>
+                                <th scope="col">Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var r in Model)
+                            {
+                                <tr>
+                                    <th scope="row">@r.id</th>
+                                    <td>@r.titulo</td>
+                                    <td>@r.idSala</td>
+                                    <td>@r.inicio</td>
+                                    <td>
+                                        <a href="@Url.Action("Details", "Agendamentos", new { id=r.id })" class="text-success" title="Visualizar"><i class="fas fa-eye">&nbsp;</i></a>
+                                        <a href="@Url.Action("Edit", "Agendamentos", new { id=r.id })" class="text-success" title="Editar"><i class="fas fa-edit">&nbsp;</i></a>
+                                        <a href="@Url.Action("Delete", "Agendamentos", new { id=r.id })" class="text-success" title="Excluir"><i class="fas fa-trash">&nbsp;</i></a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

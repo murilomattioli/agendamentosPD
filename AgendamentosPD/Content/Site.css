@@ -1,0 +1,187 @@
+﻿/* ESTILOS DE INPUTS - INICIO*/
+.input-login {
+    font-family: 'Roboto Thin', sans-serif;
+    color: #fff;
+    background: transparent;
+    /* border-radius: 6.5px; */
+    padding: 15px;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 2px solid #fff;
+    height: 45px;
+}
+
+    .input-login::placeholder {
+        text-align: left;
+        padding-left: 0px;
+        color: #fff;
+    }
+
+    .input-login:focus {
+        outline: 0;
+    }
+
+.no-outline:focus {
+    outline: 0 !important;
+    border-color: #ced4da !important;
+    box-shadow: 0 0 0 0rem rgba(255, 255, 255, 0) !important;
+}
+
+/* ESTILOS DE INPUTS - FIM*/
+/* ESTILOS DE BOXES - INICIO*/
+.login-area {
+    background: #61a05a;
+    /* border-radius: 6.5px; */
+    box-shadow: 0px 0px 25px #434343;
+}
+
+.bg-darkk {
+    background: #242424;
+}
+
+.menu-w {
+    width: 17% !important;
+    max-width: 200px;
+}
+
+.main-w {
+    width: 99%;
+    /* margin-right: 17%; */
+    /* width: 90%;
+    max-width: 100%;
+    overflow-y: scroll; */
+}
+/* ESTILOS DE BOXES - FIM*/
+/* MEDIA QUERY  - INICIO*/
+@media (min-width:1280px) {
+    .main-w {
+        width: 97.5%;
+    }
+}
+
+@media (min-width:1281px) {
+    .main-w {
+        width: 99%;
+    }
+}
+/* MEDIA QUERY  - FIM*/
+body {
+    font-family: 'Roboto', sans-serif !important;
+    background-image: url(img/company.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+/* PROPRIEDADES DE TEXTO - INICIO*/
+a {
+    text-decoration: none !important;
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.fs-22 {
+    font-size: 22px;
+}
+
+.fs-24 {
+    font-size: 24px;
+}
+
+.font-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.font-roboto-thin {
+    font-family: 'Roboto Thin', sans-serif;
+}
+
+.text-green {
+    color: #61a05a !important;
+}
+/* PROPRIEDADES DE TEXTO - FIM*/
+body {
+    padding-top: 90px
+}
+
+@media (min-width:768px) {
+    body {
+        padding-top: 0
+    }
+}
+
+@media (min-width:768px) {
+    body {
+        margin-left: 232px
+    }
+}
+
+.navbar.fixed-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030
+}
+
+@media (min-width:768px) {
+    .navbar.fixed-left {
+        bottom: 0;
+        flex-flow: column nowrap;
+        align-items: flex-start
+    }
+
+        .navbar.fixed-left .navbar-collapse {
+            flex-grow: 0;
+            flex-direction: column;
+            width: 100%
+        }
+
+            .navbar.fixed-left .navbar-collapse .navbar-nav {
+                flex-direction: column;
+                width: 100%
+            }
+
+                .navbar.fixed-left .navbar-collapse .navbar-nav .nav-item {
+                    width: 100%
+                }
+
+                    .navbar.fixed-left .navbar-collapse .navbar-nav .nav-item .dropdown-menu {
+                        top: 0
+                    }
+}
+
+@media (min-width:768px) {
+    .navbar.fixed-left {
+        right: auto
+    }
+
+        .navbar.fixed-left .navbar-nav .nav-item .dropdown-toggle:after {
+            border-top: .3em solid transparent;
+            border-left: .3em solid;
+            border-bottom: .3em solid transparent;
+            border-right: none;
+            vertical-align: baseline
+        }
+
+        .navbar.fixed-left .navbar-nav .nav-item .dropdown-menu {
+            left: 100%
+        }
+}
